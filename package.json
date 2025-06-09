@@ -1,0 +1,34 @@
+{
+  "name": "backend_web_personal",
+  "version": "1.0.0",
+  "description": "Backend for my personal web",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasgirardi92/backend_web_personal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasgirardi92/backend_web_personal/issues"
+  },
+  "homepage": "https://github.com/nicolasgirardi92/backend_web_personal#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/nodemailer": "^6.4.17",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "nodemailer": "^7.0.3"
+  }
+}
