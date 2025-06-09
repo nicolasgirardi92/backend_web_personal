@@ -21,11 +21,12 @@ app.get('/status', (req, res) => {
 
 app.post('/api/email', async (req, res) => {
     const body = req.body;
-    if (typeof body.message === 'string' && typeof body.subject === 'string') {
+    if (typeof body.message === 'string' && typeof body.subject === 'string' && typeof body.from === 'string') {
         const subject: string = body.subject;
         const message: string = body.message;
+        const from: string = body.from;
         try {
-            const result = await mailer(subject, message);
+            const result = await mailer(from, subject, message);
             res.json({ status: 'ok', messageId: result.messageId });
         } catch (err) {
             res.status(500).json({ status: 'error', message: 'Falló el envío', error: err });
