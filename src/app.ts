@@ -19,6 +19,10 @@ app.get('/status', (req, res) => {
     res.json({ status: 'ok' });
 });
 
+app.get('/version', (req, res) => {
+    res.json({ version: '0.1.0' });
+})
+
 app.post('/api/email', async (req, res) => {
     const body = req.body;
     if (typeof body.message === 'string' && typeof body.subject === 'string' && typeof body.from === 'string') {
